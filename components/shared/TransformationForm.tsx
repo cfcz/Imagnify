@@ -22,7 +22,6 @@ import {
 import { CustomField } from "./CustomField";
 import { useEffect, useState, useTransition } from "react";
 import { AspectRatioKey, debounce, deepMergeObjects } from "@/lib/utils";
-import { config } from "process";
 import MediaUploader from "./MediaUploader";
 import TransformedImage from "./TransformedImage";
 import { updateCredits } from "@/lib/actions/use.actions";
@@ -56,7 +55,7 @@ const TransformationForm = ({
   const [isTransforming, setIsTransforming] = useState(false);
   const [transformationConfig, setTransformationConfig] = useState(config);
   //在tranformation handler中使用transition Hook
-  const [isPending, startTransition] = useTransition();
+  const [isPending, startTransition] = useTransition(); // eslint-disable-line
   const router = useRouter();
 
   const initialValues =

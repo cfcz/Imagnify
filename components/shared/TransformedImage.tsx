@@ -5,7 +5,6 @@ import { CldImage, getCldImageUrl } from "next-cloudinary";
 import { PlaceholderValue } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import React from "react";
-import { bigint } from "zod";
 
 const TransformedImage = ({
   image,

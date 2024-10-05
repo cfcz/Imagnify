@@ -41,7 +41,7 @@ const MediaUploader = ({
     });
   };
 
-  const onUploadErrorHandler = (result: any) => {
+  const onUploadErrorHandler = () => {
     toast({
       title: "Something went wrong while uploading",
       description: "Please try again",

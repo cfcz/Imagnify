@@ -21,7 +21,7 @@ const CreditsPage = async () => {
         <CreditBalance credits={user.creditBalance} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
           <DailyCheckIn userId={userId} checkinstatus={user.lastCheckIn} />
-          <ShareForCredits userId={userId} />
+          <ShareForCredits />
         </div>
       </section>
     </>

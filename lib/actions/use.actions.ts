@@ -75,3 +75,22 @@ export async function updateCredits(userId: string, creditFee: number) {
     handleError(error);
   }
 }
+
+//UPDATED CHECK IN
+export async function checkInForCredits(userId: string) {
+  try {
+    await connectToDatabase();
+    const today = new Date().toDateString();
+    const result = await User.findOneAndUpdate(
+      { clerkId: userId },
+      {
+        $inc: { creditBalance: 10 },
+        $set: { lastCheckIn: today },
+      },
+      { new: true }
+    );
+    return JSON.parse(JSON.stringify(result));
+  } catch (error) {
+    handleError(error);
+  }
+}

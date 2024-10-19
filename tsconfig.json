@@ -22,6 +22,6 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  //在include中会把next里的类型文件包含
+  //需要编译的ts文件列表
   "exclude": ["node_modules"]
 }
